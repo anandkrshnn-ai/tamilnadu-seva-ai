@@ -4,6 +4,10 @@ A trustworthy, production-grade multilingual AI assistant designed to help citiz
 
 This repository represents a fully validated, robust prototype submitted for the **Google Cloud Gen AI Academy APAC "Meet the Builders"** program.
 
+## 📽️ Demo Video
+See the working interface and hybrid semantic search in action:
+👉 **[Watch the Demo Video Walkthrough](YOUR_SHAREABLE_LOOM_OR_YOUTUBE_LINK_HERE)**
+
 ---
 
 ## 📖 The Narrative: Problem → Solution → Impact
