@@ -5,7 +5,7 @@ from google import genai
 from google.genai import types
 from google.genai.errors import APIError
 
-from app.config import GEMINI_API_KEY, GEMINI_MODEL
+from app.config import settings
 from app.prompts import get_system_prompt, build_user_prompt
 
 logger = logging.getLogger("app.gemini_client")
@@ -14,8 +14,8 @@ def generate_grounded_answer(question: str, language: str, contexts: List[Dict[s
     """
     Interfaces with the Google GenAI SDK to generate a grounded, multilingual response.
     """
-    if not GEMINI_API_KEY:
-        logger.warning("GEMINI_API_KEY not found in environment variables. Running in mock/offline mode.")
+    if not settings.GEMINI_API_KEY:
+        logger.warning("GEMINI_API_KEY not found in settings. Running in mock/offline mode.")
         # Provide a helpful grounded offline response based directly on context
         first_scheme = contexts[0] if contexts else {}
         return {
@@ -34,13 +34,13 @@ def generate_grounded_answer(question: str, language: str, contexts: List[Dict[s
         
     try:
         # Initialize client using the new google-genai SDK format
-        client = genai.Client(api_key=GEMINI_API_KEY)
+        client = genai.Client(api_key=settings.GEMINI_API_KEY)
         
         system_instruction = get_system_prompt()
         user_prompt = build_user_prompt(question, language, contexts)
         
         response = client.models.generate_content(
-            model=GEMINI_MODEL,
+            model=settings.GEMINI_MODEL,
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
