@@ -93,8 +93,14 @@ def get_embeddings_for_schemes(client: genai.Client, schemes: List[Dict[str, Any
                 contents=doc_text
             )
             # Response format from google-genai SDK contains list of embeddings
-            emb_values = response.embeddings[0].values
-            embeddings.append(emb_values)
+            if response.embeddings and len(response.embeddings) > 0:
+                emb_values = response.embeddings[0].values
+                if emb_values is not None:
+                    embeddings.append(list(emb_values))
+                else:
+                    embeddings.append([0.0] * 768)
+            else:
+                embeddings.append([0.0] * 768)
         except Exception as e:
             logger.error(f"Failed to generate embedding for scheme {scheme.get('id')}: {e}")
             # Fallback with dummy vector if single one fails
@@ -136,7 +142,15 @@ def retrieve_relevant_schemes(query: str, top_k: int = 3) -> List[Dict[str, Any]
                 model=settings.EMBEDDING_MODEL,
                 contents=query
             )
-            query_vector = query_response.embeddings[0].values
+            
+            if query_response.embeddings and len(query_response.embeddings) > 0:
+                query_values = query_response.embeddings[0].values
+                if query_values is not None:
+                    query_vector = list(query_values)
+                else:
+                    query_vector = [0.0] * 768
+            else:
+                query_vector = [0.0] * 768
             
             # Compute semantic score & merge with keyword score
             scored_schemes = []

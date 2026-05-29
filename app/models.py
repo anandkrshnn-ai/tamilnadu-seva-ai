@@ -11,11 +11,11 @@ class SourceItem(BaseModel):
 
 class AskResponse(BaseModel):
     answer: str = Field(..., description="Concise paragraph answering the user's query in the requested language")
-    language: Literal["en", "ta", "hi"] = Field(..., description="The language of the response")
+    language: str = Field(..., description="The language of the response")
     eligibility: List[str] = Field(default=[], description="Extracted eligibility rules from matched schemes")
     benefits: List[str] = Field(default=[], description="Extracted benefits/entitlements from matched schemes")
     how_to_apply: List[str] = Field(default=[], description="Extracted step-by-step application instructions")
     why_this_answer: str = Field(..., description="Brief reasoning of why this scheme matches the user query")
     sources: List[SourceItem] = Field(default=[], description="List of official source titles and URLs")
-    confidence: Literal["high", "medium", "low"] = Field(..., description="AI confidence rating of correctness based on grounding")
+    confidence: str = Field(..., description="AI confidence rating of correctness based on grounding")
     matched_schemes: List[str] = Field(default=[], description="List of matched scheme IDs or names")

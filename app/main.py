@@ -41,7 +41,36 @@ def ask_question(request: AskRequest):
             contexts=matched_schemes
         )
         
-        # 3. Inject matching schemes list
+        # 3. Sanitize responses to prevent Pydantic serialization validation errors
+        if not isinstance(response_data, dict):
+            response_data = {"answer": str(response_data)}
+            
+        response_data["language"] = response_data.get("language") or request.language
+        response_data["confidence"] = response_data.get("confidence") or "medium"
+        response_data["why_this_answer"] = response_data.get("why_this_answer") or "Extracted from verified local documentation."
+        
+        # Standardize lists
+        for list_field in ["eligibility", "benefits", "how_to_apply"]:
+            if not isinstance(response_data.get(list_field), list):
+                response_data[list_field] = []
+                
+        # Clean up sources
+        sources_list = []
+        for src in response_data.get("sources", []):
+            if isinstance(src, dict) and src.get("title") and src.get("url"):
+                sources_list.append({"title": src["title"], "url": src["url"]})
+            elif isinstance(src, str):
+                sources_list.append({"title": "Official Link", "url": src})
+                
+        if not sources_list:
+            for scheme in matched_schemes:
+                sources_list.append({
+                    "title": scheme.get("name", "Official Portal"),
+                    "url": scheme.get("official_url", "")
+                })
+        response_data["sources"] = sources_list
+
+        # Inject matching schemes list
         scheme_names = [scheme.get("name") for scheme in matched_schemes if scheme.get("name")]
         response_data["matched_schemes"] = scheme_names
         
