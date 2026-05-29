@@ -50,7 +50,10 @@ def generate_grounded_answer(question: str, language: str, contexts: List[Dict[s
         )
         
         # Parse the JSON response
-        result = json.loads(response.text)
+        text_content = response.text
+        if not text_content:
+            raise RuntimeError("Gemini model returned empty response text.")
+        result = json.loads(text_content)
         return result
         
     except APIError as e:
