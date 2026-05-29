@@ -1,0 +1,120 @@
+[
+  {
+    "id": "pudhumai_penn",
+    "name": "Pudhumai Penn Scheme (Moovalur Ramamirtham Ammaiyar Higher Education Assurance Scheme)",
+    "category": "Education & Women Empowerment",
+    "department": "Social Welfare and Women Empowerment Department, Government of Tamil Nadu",
+    "summary": "Assists girl students who studied in government schools from classes 6 to 12 in continuing their higher education by providing financial assistance.",
+    "eligibility": [
+      "Must be a female student.",
+      "Must have studied in Government Schools in Tamil Nadu from Class 6 to Class 12.",
+      "Must be enrolled in a recognized higher education course (degree, diploma, or professional course)."
+    ],
+    "benefits": [
+      "Financial assistance of ₹1,000 per month paid directly into the student's bank account till the completion of the course."
+    ],
+    "how_to_apply": [
+      "Apply online through the dedicated Pudhumai Penn portal or via college administration.",
+      "Provide Government School Transfer Certificate (TC) and study certificate.",
+      "Provide bank account details linked to Aadhaar."
+    ],
+    "language_notes": "Also known as Moovalur Ramamirtham Ammaiyar Scheme.",
+    "keywords": ["pudhumai penn", "girl student", "higher education", "financial aid", "monthly thousand rupees", "government school girls", "pudhumai pen", "penn"],
+    "official_url": "https://tnsocialwelfare.tn.gov.in/en/specilisationswoman-welfare/pudhumai-penn",
+    "source_type": "Official Tamil Nadu Social Welfare Portal",
+    "verification_status": "verified"
+  },
+  {
+    "id": "cmchis",
+    "name": "Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS)",
+    "category": "Health & Medical Insurance",
+    "department": "Health and Family Welfare Department, Government of Tamil Nadu",
+    "summary": "Provides comprehensive health insurance coverage to families to enable them to access quality medical care for covered surgeries, diagnostic procedures, and treatments.",
+    "eligibility": [
+      "Must be a resident family of Tamil Nadu.",
+      "Family annual income must be below the official threshold (currently ₹1,20,000 per annum for scheme enrolment).",
+      "Should hold a valid CMCHIS Smart Card."
+    ],
+    "benefits": [
+      "Cashless health insurance coverage up to ₹5,00,000 (5 Lakhs) per family per year for listed medical and surgical procedures in empaneled hospitals."
+    ],
+    "how_to_apply": [
+      "Visit the District Collectorate office or CMCHIS kiosk with Smart Card/Ration Card and Income Certificate.",
+      "Get enrolled, complete biometric registration, and receive the CMCHIS Smart Card."
+    ],
+    "language_notes": "Known in Tamil as முதலமைச்சரின் விரிவான மருத்துவக் காப்பீட்டுத் திட்டம்.",
+    "keywords": ["cmchis", "health insurance", "medical cover", "cashless treatment", "hospital card", "5 lakhs", "maruthuva kaapeedu"],
+    "official_url": "https://www.cmchistn.com/",
+    "source_type": "Official CMCHIS Portal",
+    "verification_status": "verified"
+  },
+  {
+    "id": "first_gen_graduation",
+    "name": "First Generation Graduation Tuition Fee Waiver Scheme",
+    "category": "Education & Tuition Waiver",
+    "department": "Directorate of Technical Education (DOTE), Government of Tamil Nadu",
+    "summary": "Waives tuition fees for students pursuing professional courses who are the first graduates in their families, helping them access engineering, medicine, and other courses.",
+    "eligibility": [
+      "Must be a resident of Tamil Nadu.",
+      "The student must be the first person in their family (including siblings, parents, and grandparents) to graduate from college.",
+      "Must secure admission under government quota through single window counseling."
+    ],
+    "benefits": [
+      "Concession/waiver of tuition fees for professional courses as determined by government guidelines."
+    ],
+    "how_to_apply": [
+      "Obtain a First Graduate Certificate from the Revenue Department (Tahsildar) via e-Sevai centers.",
+      "Submit the First Graduate Certificate during admission counseling or college admission."
+    ],
+    "language_notes": "Also referred to as First Graduate Tuition Fee Waiver.",
+    "keywords": ["first graduate", "first generation", "tuition fee waiver", "scholarship", "engineering counseling", "first graduate certificate", "mudhal thalaimurai"],
+    "official_url": "https://dte.tn.gov.in/first-generation-graduation-scholarship",
+    "source_type": "Official Directorate of Technical Education Page",
+    "verification_status": "verified"
+  },
+  {
+    "id": "tndce_scholarships",
+    "name": "Collegiate Education Scholarships",
+    "category": "Education Scholarships",
+    "department": "Directorate of Collegiate Education (DCE), Government of Tamil Nadu",
+    "summary": "Offers a collection of scholarship schemes for eligible students pursuing collegiate education in arts, science, commerce, and postgraduate studies.",
+    "eligibility": [
+      "Must be enrolled in a recognized government, government-aided, or self-financing college in Tamil Nadu.",
+      "Must fulfill specific scheme criteria (such as community categories, low family income, or merit)."
+    ],
+    "benefits": [
+      "Financial assistance for college fees, book allowances, and maintenance allowance based on the specific collegiate scholarship category."
+    ],
+    "how_to_apply": [
+      "Apply online via the DCE Scholarship portal or submit physical applications to the college scholarship clerk/officer.",
+      "Provide community certificate, income certificate, bank passbook details, and marks sheets."
+    ],
+    "language_notes": "Lists multiple schemes like EVR Nagammai, Post Matric, and State level scholarships.",
+    "keywords": ["scholarships", "collegiate education", "tndce", "college fee", "arts science scholarship", "post matric scholarship"],
+    "official_url": "https://tndce.tn.gov.in/Home/scholarship",
+    "source_type": "Official Directorate of Collegiate Education Portal",
+    "verification_status": "verified"
+  },
+  {
+    "id": "tndce_women_empowerment",
+    "name": "Women Empowerment and Collegiate Education Incentives",
+    "category": "Education & Women Empowerment",
+    "department": "Directorate of Collegiate Education (DCE), Government of Tamil Nadu",
+    "summary": "Promotes higher education enrollment of women by highlighting specific empowerment schemes, incentives, safety rules, and hostels available for female collegiate students.",
+    "eligibility": [
+      "Must be a female student.",
+      "Enrolled in higher education courses in colleges in Tamil Nadu."
+    ],
+    "benefits": [
+      "Access to safe government women hostels, transport concessions, counseling, and specific cash/book incentives under women-empowerment guidelines."
+    ],
+    "how_to_apply": [
+      "Inquire through the college principal or collegiate education portal for available hostel allocations and incentives."
+    ],
+    "language_notes": "Encompasses safety measures and special provisions for women students.",
+    "keywords": ["women empowerment", "girls hostel", "collegiate education", "incentives for girls", "dce women welfare"],
+    "official_url": "https://tndce.tn.gov.in/Home/empowerment_women",
+    "source_type": "Official Directorate of Collegiate Education Portal",
+    "verification_status": "verified"
+  }
+]

@@ -1,0 +1,35 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: tamilnadu-seva-api
+  labels:
+    cloud.googleapis.com/location: asia-south1
+spec:
+  template:
+    spec:
+      containers:
+        - image: gcr.io/PROJECT_ID/tamilnadu-seva-api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: GEMINI_API_KEY
+              value: "YOUR_GEMINI_API_KEY_OR_SECRET_REFERENCE"
+            - name: GEMINI_MODEL
+              value: "gemini-2.5-flash"
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: tamilnadu-seva-ui
+  labels:
+    cloud.googleapis.com/location: asia-south1
+spec:
+  template:
+    spec:
+      containers:
+        - image: gcr.io/PROJECT_ID/tamilnadu-seva-ui:latest
+          ports:
+            - containerPort: 8501
+          env:
+            - name: BACKEND_API_URL
+              value: "https://tamilnadu-seva-api-XXXXX.a.run.app"
