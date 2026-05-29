@@ -6,7 +6,7 @@ This repository represents a fully validated, robust prototype submitted for the
 
 ## 📽️ Demo Video
 See the working interface and hybrid semantic search in action:
-👉 **[Watch the Demo Video Walkthrough](YOUR_SHAREABLE_LOOM_OR_YOUTUBE_LINK_HERE)**
+👉 **[Watch the demo_video.mp4 (inline on GitHub)](demo_video.mp4)**
 
 ---
 
